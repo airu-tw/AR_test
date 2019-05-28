@@ -1,40 +1,14 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset=utf-8>
-        <title>My first Three.js app</title>
-        <style>
-            body { margin: 0; }
-            canvas { width: 100%; height: 100% }
-        </style>
-    </head>
-    <body>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/95/three.js"></script>
-        <script>
-            // 接下來的代碼都與此位置做撰寫
-						const scene = new THREE.Scene()
-						// 建立相機
-						const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 )
-						// 建立渲染器
-						const renderer = new THREE.WebGLRenderer()
+<script src=”https://aframe.io/releases/0.8.0/aframe.min.js"></script>
+<script src=”https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
 
-						// 相機角度
-						camera.position.z = 500
-
-						// 將渲染器加入畫面
-						renderer.setSize( window.innerWidth, window.innerHeight )
-						document.body.appendChild( renderer.domElement )
-
-						// mesh 為我們後面要加入的 3D 模型
-						// 直接調用 scene 下的 add 方法，就可將 模型加入舞臺
-						const geometry = new THREE.BoxBufferGeometry( 100, 100, 100 );
-						const material = new THREE.MeshBasicMaterial( {color: 0x00ff00} );
-						const mesh = new THREE.Mesh( geometry, material );
-						scene.add( mesh )
-
-						// 將舞臺與相機加入渲染器
-						renderer.render( scene, camera )
-
-        </script>
-    </body>
-</html>
+<body style=’margin : 0px; overflow: hidden;’>
+  <a-scene embedded arjs=’sourceType: webcam;’>
+      <a-marker preset=’hiro’>
+				<a-entity
+            obj-model=”obj-model=”obj: url(/obj/minecraft-steve.obj);”>
+        </a-entity>
+      </a-marker>
+  <a-entity camera>
+  </a-entity>
+  </a-scene>
+</body>
