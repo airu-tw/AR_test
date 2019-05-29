@@ -1,10 +1,16 @@
 <script src="/js/aframe.min.js"></script>
 <script src="/js/aframe-ar.js"></script>
-
 <body style=’margin : 0px; overflow: hidden;’>
+  var
+  <button onclick="document.getElementById('fish').obj-model =
+  "obj: url(obj/fish-2.obj);
+  mtl: url(obj/fish-1.mtl)"">fish1</button>
+  <button onclick="document.getElementById('fish').obj-model =
+  "obj: url(obj/fish-2.obj);
+  mtl: url(obj/fish-2.mtl)"">fish2</button>
   <a-scene embedded arjs='sourceType: webcam; debugUIEnabled: false;'>
       <a-marker preset=’hiro’>
-				<a-entity
+				<a-entity id="fish"
 				obj-model="obj: url(obj/fish-2.obj);
         mtl: url(obj/fish-1.mtl)">
         </a-entity>
