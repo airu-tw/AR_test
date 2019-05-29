@@ -2,11 +2,12 @@
 <script src="/js/aframe-ar.js"></script>
 
 <body style=’margin : 0px; overflow: hidden;’>
-  <a-scene embedded artoolkit=’sourceType: webcam;’>
+  <a-scene embedded artoolkit=’sourceType: webcam;’ markersAreaEnabled ='false;'>
       <a-marker preset=’hiro’>
 				<a-entity
 				obj-model="obj: url(obj/fish-2.obj);">
         </a-entity>
+
       </a-marker>
   <a-entity camera>
   </a-entity>
