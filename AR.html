@@ -9,6 +9,10 @@
         <a-asset-item id="fish-mtl"
           src="obj/fish-2.mtl">
         </a-asset-item>
+        <script>
+          document.querySelector("#fish-obj").src = "obj/fish-2.obj";
+          document.querySelector("#fish-mtl").src = "obj/fish-1.mtl";
+        </script>
         </a-assets>
           <a-marker preset=’hiro’>
     				<a-entity id="AR"
@@ -19,8 +23,5 @@
           <a-entity camera>
           </a-entity>
       </a-scene>
-      <script>
-        document.querySelector("#fish-obj").src = "obj/fish-2.obj";
-        document.querySelector("#fish-mtl").src = "obj/fish-1.mtl";
-      </script>
+
 </body>
