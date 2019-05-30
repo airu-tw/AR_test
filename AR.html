@@ -12,8 +12,8 @@
         </a-assets>
           <a-marker preset=’hiro’>
     				<a-entity id="AR"
-    				obj-model="obj: #tree-obj;
-            mtl: #tree-obj;">
+    				obj-model="obj: #fish-obj;
+            mtl: #fish-mtl;">
             </a-entity>
           </a-marker>
           <a-entity camera>
@@ -21,7 +21,7 @@
       </a-scene>
       <script>
         const obj = document.querySelector("#fish-obj");
-        const mtl = document.querySelector("#fish-obj");
+        const mtl = document.querySelector("#fish-mtl");
         obj.src = "obj/fish-2.obj";
         mtl.src = "obj/fish-1.mtl";
       </script>
