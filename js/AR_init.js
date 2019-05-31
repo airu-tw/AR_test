@@ -5,5 +5,6 @@ AFRAME.registerComponent('fish', {
         aEntity.setAttribute('obj-model',{
           obj: #fish-obj,
           mtl: #fish-mtl2});
+        console .log（'Hello，World！'）;
     }
-});  
+});
