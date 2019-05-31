@@ -1,6 +1,17 @@
-<script src="/js/aframe.min.js"></script>
-<script src="/js/aframe-ar.js"></script>
-<script src="/js/AR_init.js"></script>
+<script src="js/aframe.min.js"></script>
+<script src="js/aframe-ar.js"></script>
+<script src="js/AR_init.js"></script>
+<script>
+  AFRAME.registerComponent('fish', {
+      init: function() {
+          const aEntity = document.querySelector("#fish_models");
+          aEntity.setAttribute('obj-model',{
+            obj: #fish-obj,
+            mtl: #fish-mtl2});
+          console .log（'Hello，World！'）;
+      }
+  });
+</script>
 <body style=’margin : 0px; overflow: hidden;’>
       <a-scene embedded arjs='sourceType: webcam; debugUIEnabled: false;'>
         <a-assets>
@@ -14,7 +25,7 @@
           src="obj/fish-1.mtl">
         </a-asset-item>
         </a-assets>
-          <a-marker AR emitevents="true" cursor="rayOrigin: mouse" preset="hiro">
+          <a-marker  preset="hiro">
     				<a-entity fish id="fish_models"
     				obj-model="obj: #fish-obj;
             mtl: #fish-mtl1;">
